@@ -1,0 +1,320 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Merriweather:wght@400&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000; /* Black background */
+  color: white;
+}
+
+/* Header Styling */
+header {
+  text-align: center; /* Center all elements in the header */
+  background-color: #000; /* Black background for the header */
+}
+
+.event-title {
+  font-size: 2.5rem; /* Adjust size for prominence */
+  text-align: left; /* Align the title to the left */
+  margin-top: 100px; /* Add spacing above and below the title */
+  margin-bottom: 15px;
+  position: relative; /* For positioning the underline */
+  padding-bottom: 10px; /* Space between the text and underline */
+}
+
+.event-title::after {
+  content: '';
+  display: block;
+  width: 0%; /* Length of the underline */
+  height: 3px; /* Thickness of the line */
+  background-color: white; /* Color of the underline */
+  position: absolute;
+  left: 0; /* Align the line with the left side of the title */
+  bottom: 0; /* Position the line below the text */
+}
+
+
+/* Logo Styling */
+.logo {
+  text-align: center; /* Center the logo container */
+  margin: 40px; /* Reduce space between logo and nav bar */
+}
+
+.logo img {
+  max-width: 10%; /* Make logo responsive and centered */
+  height: auto; /* Maintain aspect ratio */
+  display: inline-block;
+}
+
+/* Navigation Bar Styling */
+nav {
+  background-color: #000; /* Black background for the nav bar */
+  text-align: center; /* Center the nav bar */
+  margin-top: 10px; /* Slight space between the logo and the nav bar */
+}
+
+.nav-separator {
+  height: 2px;
+  background-color: #fff; /* Thin white line */
+  width: 100%; /* Full width of the nav bar */
+}
+
+.nav-links {
+  list-style: none;
+  display: inline-flex;
+  gap: 90%; /* Increased gap for more spacing between links */
+  justify-content: center; /* Center the links */
+  margin: 15px 0; /* Add space inside the navigation bar */
+  padding: 10px 0; /* Padding for height */
+}
+
+.nav-links a {
+  color: white; /* White text for contrast */
+  text-decoration: none;
+  font-size: 24px; /* Increased font size for bigger links */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Slight spacing between letters */
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #0000ff; /* Accent color on hover */
+  text-decoration: underline;
+}
+
+
+
+
+main {
+  position: relative; /* Establish a positioning context for the pseudo-element */
+  padding: 50px 20px;
+  color: white; /* Ensure text remains readable */
+  text-align: center;
+  background-color: #000; /* Fallback background color */
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('Logo/background.png'); /* Add your background image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Keep the image fixed when scrolling */
+  opacity: 0.04; /* Adjust transparency */
+  z-index: 0; /* Keep the pseudo-element behind the content */
+  pointer-events: none; /* Avoid interaction issues */
+}
+
+main > * {
+  position: relative; /* Ensure main content is above the pseudo-element */
+  z-index: 1; /* Explicitly place content above the pseudo-element */
+}
+
+
+
+.main-description p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-family: 'Merriweather', serif; /* Merriweather for description text */
+  font-weight: 400;
+}
+
+.main-description video {
+  width: 90%;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for contrast */
+}
+
+/* Section Separator */
+.upcoming-events,
+.past-events {
+  padding-bottom: 40px; /* Add space at the bottom of sections */
+  margin-bottom: 40px; /* Space below the separator */
+}
+
+/* Flyer Styling */
+.upcoming-events img,
+.past-events img {
+  float: left; /* Aligns the flyer to the left of the container */
+  margin-right: 2%; /* Adds space between the flyer and the adjacent content */
+  padding: 10px;
+  width: 35%; /* Fixed width */
+  height: 35%; /* Fixed height */
+  object-fit: cover; /* Ensures the image fits the dimensions without distortion */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow for a polished look */
+}
+
+
+
+/* Gallery Styling */
+.photo-grid {
+  margin-top: 40px;
+}
+
+.photo-grid h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff5500; /* Accent color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif; /* Montserrat for gallery title */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 15px;
+}
+
+.grid a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.grid a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images fill the container */
+  aspect-ratio: 1/1; /* Make all images square */
+  transition: transform 0.4s ease; /* Smooth hover effect */
+}
+
+.grid a:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.grid a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for images */
+  transition: background 0.4s ease;
+}
+
+.grid a:hover::after {
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
+}
+
+/* Events Grid Styling */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); /* Responsive grid */
+  gap: 10px;
+}
+
+.events-grid a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.events-grid a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images fill the container */
+  aspect-ratio: 1/1; /* Make all images square */
+  transition: transform 0.4s ease; /* Smooth hover effect */
+}
+
+.events-grid a:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.events-grid a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0); /* Dark overlay for images */
+  transition: background 0.4s ease;
+}
+
+.events-grid a:hover::after {
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
+}
+
+.soundcloud-visualizer {
+  float: right;
+  width: 60%;
+  margin: 0 auto; /* Center the visualizer */
+  background: none; /* No background */
+  margin-bottom: 30px;
+
+}
+
+.soundcloud-visualizer iframe {
+  width: 100%;
+  border: none; /* Remove border */
+  background: none; /* Ensure no background on iframe */
+}
+
+.artist-section {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+  margin-bottom: 30px; /* Add spacing between artist sections */
+}
+
+
+.artist-image {
+  float: left; /* Position the image to the left */
+  width: 30%; /* Set the image width as a percentage of the parent container */
+  max-width: 100%; /* Prevent the image from exceeding its natural size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add spacing to the right of the image */
+  margin-bottom: 20px; /* Add spacing below the image */
+  display: block; /* Ensure proper block-level behavior for the image */
+  margin-bottom: 30px;
+}
+
+.artist-name {
+  font-size: 2rem; /* Make the font much larger */
+  font-weight: bold; /* Bold text for better emphasis */
+  color: white; /* Ensure visibility on dark backgrounds */
+  text-align: left; /* Align text to the left */
+  margin: 0; /* Remove default margins */
+  margin-top: 10px; /* Add slight spacing above the name */
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .photo-grid h2 {
+    font-size: 2rem;
+  }
+
+  .main-description p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+}
