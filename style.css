@@ -260,7 +260,7 @@ main > * {
 
 .soundcloud-visualizer {
   float: right;
-  width: 60%;
+  width: 80%;
   margin: 0 auto; /* Center the visualizer */
   background: none; /* No background */
   margin-bottom: 30px;
@@ -280,26 +280,23 @@ main > * {
   margin-bottom: 30px; /* Add spacing between artist sections */
 }
 
-
 .artist-image {
-  float: left; /* Position the image to the left */
-  width: 35%; /* Set the image width as a percentage of the parent container */
+  width: 30%; /* Set the image width relative to the container */
   max-width: 100%; /* Prevent the image from exceeding its natural size */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 20px; /* Add spacing to the right of the image */
-  margin-bottom: 20px; /* Add spacing below the image */
-  display: block; /* Ensure proper block-level behavior for the image */
-  margin-bottom: 30px;
+  height: auto; /* Maintain the image's aspect ratio */
+  margin-bottom: 10px; /* Add spacing below the image */
+  display: block; /* Ensure block behavior */
 }
 
 .artist-name {
-  font-size: 2rem; /* Make the font much larger */
-  font-weight: bold; /* Bold text for better emphasis */
-  color: white; /* Ensure visibility on dark backgrounds */
-  text-align: left; /* Align text to the left */
+  font-size: 2rem; /* Larger font for emphasis */
+  font-weight: bold; /* Bold text */
+  color: white; /* Ensure text is visible on dark backgrounds */
   margin: 0; /* Remove default margins */
-  margin-top: 10px; /* Add slight spacing above the name */
+  margin-bottom: 10px; /* Add spacing below the name */
+  text-align: left; /* Align text to the left */
 }
+
 
 
 /* Media Queries */
