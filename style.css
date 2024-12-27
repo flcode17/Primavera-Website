@@ -71,7 +71,7 @@ nav {
 .nav-links {
   list-style: none;
   display: inline-flex;
-  gap: 90%; /* Increased gap for more spacing between links */
+  gap: 50%; /* Increased gap for more spacing between links */
   justify-content: center; /* Center the links */
   margin: 15px 0; /* Add space inside the navigation bar */
   padding: 10px 0; /* Padding for height */
@@ -283,7 +283,7 @@ main > * {
 
 .artist-image {
   float: left; /* Position the image to the left */
-  width: 30%; /* Set the image width as a percentage of the parent container */
+  width: 35%; /* Set the image width as a percentage of the parent container */
   max-width: 100%; /* Prevent the image from exceeding its natural size */
   height: auto; /* Maintain aspect ratio */
   margin-right: 20px; /* Add spacing to the right of the image */
