@@ -258,46 +258,62 @@ main > * {
   background: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
 }
 
-.soundcloud-visualizer {
-  float: right;
-  width: 70%;
-  margin: 0 auto; /* Center the visualizer */
-  background: none; /* No background */
-  margin-bottom: 30px;
-
+/* Wrapper for artist content and soundcloud */
+.artist-wrapper {
+  display: flex; /* Flexbox layout */
+  align-items: flex-start; /* Align items at the top */
+  justify-content: space-between; /* Space between the two sections */
+  gap: 20px; /* Add space between artist section and SoundCloud visualizer */
+  margin-bottom: 30px; /* Add space below each artist section */
+  padding: 10px;
 }
 
-.soundcloud-visualizer iframe {
-  width: 100%;
-  border: none; /* Remove border */
-  background: none; /* Ensure no background on iframe */
-}
-
+/* Artist Section Styling */
 .artist-section {
+  flex: 0 0 60%; /* Take up 60% of the container width */
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-start; /* Align items to the left */
-  margin-bottom: 30px; /* Add spacing between artist sections */
+  gap: 20px; /* Add space between image and details */
 }
-
 
 .artist-image {
-  width: 30%; /* Set the image width relative to the container */
-  max-width: 100%; /* Prevent the image from exceeding its natural size */
-  height: auto; /* Maintain the image's aspect ratio */
-  margin-bottom: 10px; /* Add spacing below the image */
-  display: block; /* Ensure block behavior */
+  width: 50%; /* Fixed width for the image */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent image from exceeding its natural size */
+  display: block;
+}
+
+.artist-details {
+  flex: 1; /* Allow details to grow within the section */
 }
 
 .artist-name {
-  font-size: 2rem; /* Larger font for emphasis */
-  font-weight: bold; /* Bold text */
-  color: white; /* Ensure text is visible on dark backgrounds */
-  margin: 0; /* Remove default margins */
+  font-size: 2rem; /* Bigger font size */
+  font-weight: bold;
+  color: white; /* White text for contrast */
   margin-bottom: 10px; /* Add spacing below the name */
-  text-align: left; /* Align text to the left */
 }
 
+.artist-details p {
+  font-size: 1.2rem; /* Text size for description */
+  color: white;
+  margin: 0;
+}
+
+/* SoundCloud Section */
+.artist-soundcloud {
+  flex: 0 0 40%; /* Take up 40% of the container width */
+}
+
+.soundcloud-visualizer {
+  width: 100%; /* Full width of the container */
+}
+
+.soundcloud-visualizer iframe {
+  width: 100%; /* Full width */
+  height: 150px; /* Set iframe height */
+  border: none; /* No border */
+  background: none; /* Transparent background */
+}
 
 
 /* Media Queries */
