@@ -260,7 +260,7 @@ main > * {
 
 .soundcloud-visualizer {
   float: right;
-  width: 80%;
+  width: 70%;
   margin: 0 auto; /* Center the visualizer */
   background: none; /* No background */
   margin-bottom: 30px;
@@ -279,6 +279,7 @@ main > * {
   align-items: flex-start; /* Align items to the left */
   margin-bottom: 30px; /* Add spacing between artist sections */
 }
+
 
 .artist-image {
   width: 30%; /* Set the image width relative to the container */
@@ -314,4 +315,5 @@ main > * {
     font-size: 1.2rem;
     margin-bottom: 20px;
   }
+
 }
