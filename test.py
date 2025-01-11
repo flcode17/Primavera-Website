@@ -39,6 +39,6 @@ def resize_images_by_percentage(input_folder, output_folder, scale_percentage):
 # Example usage
 input_folder = "/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events/003_Afterburn/Input_Photos"  # Replace with your input folder path
 output_folder = "/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events/ResizedPhotos"  # Replace with your output folder path
-scale_percentage = 50  # Replace with your desired scale percentage (e.g., 50 for 50%)
+scale_percentage = 30  # Replace with your desired scale percentage (e.g., 50 for 50%)
 
 resize_images_by_percentage(input_folder, output_folder, scale_percentage)

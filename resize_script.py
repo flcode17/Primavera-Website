@@ -1,15 +1,14 @@
 from PIL import Image
 import os
 
-def resize_images(input_folder, output_folder, max_width, max_height):
+def resize_images_by_percentage(input_folder, output_folder, scale_percentage):
     """
-    Resize all images in the input_folder and save them to the output_folder.
+    Resize all images in the input_folder by a scale percentage and save them to the output_folder.
 
     Args:
         input_folder (str): Path to the folder containing images to resize.
         output_folder (str): Path to the folder to save resized images.
-        max_width (int): Maximum width of the resized image.
-        max_height (int): Maximum height of the resized image.
+        scale_percentage (float): Percentage to scale the images (e.g., 50 for 50%).
     """
     # Create the output folder if it doesn't exist
     os.makedirs(output_folder, exist_ok=True)
@@ -24,15 +23,12 @@ def resize_images(input_folder, output_folder, max_width, max_height):
                 # Get the original dimensions
                 original_width, original_height = img.size
 
-                # Calculate the scaling factor to maintain aspect ratio
-                scaling_factor = min(max_width / original_width, max_height / original_height)
+                # Calculate the new dimensions based on scale percentage
+                new_width = int(original_width * (scale_percentage / 100))
+                new_height = int(original_height * (scale_percentage / 100))
 
-                # Calculate the new dimensions
-                new_width = int(original_width * scaling_factor)
-                new_height = int(original_height * scaling_factor)
-
-                # Resize the image
-                resized_img = img.resize((new_width, new_height), Image.ANTIALIAS)
+                # Resize the image using LANCZOS resampling
+                resized_img = img.resize((new_width, new_height), Image.LANCZOS)
 
                 # Save the resized image to the output folder
                 output_path = os.path.join(output_folder, filename)
@@ -43,7 +39,6 @@ def resize_images(input_folder, output_folder, max_width, max_height):
 # Example usage
 input_folder = "/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events/003_Afterburn/Input_Photos"  # Replace with your input folder path
 output_folder = "/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events/ResizedPhotos"  # Replace with your output folder path
-max_width = 145  # Replace with your desired max width
-max_height = 145  # Replace with your desired max height
+scale_percentage = 30  # Replace with your desired scale percentage (e.g., 50 for 50%)
 
-resize_images(input_folder, output_folder, max_width, max_height)
+resize_images_by_percentage(input_folder, output_folder, scale_percentage)
