@@ -114,7 +114,7 @@ main::before {
   background-size: cover; /* Ensure the image covers the entire section */
   background-position: center; /* Center the image */
   background-attachment: fixed; /* Keep the image fixed when scrolling */
-  opacity: 0.04; /* Adjust transparency */
+  opacity: 0.06; /* Adjust transparency */
   z-index: 0; /* Keep the pseudo-element behind the content */
   pointer-events: none; /* Avoid interaction issues */
 }
