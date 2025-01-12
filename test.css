@@ -96,6 +96,7 @@ nav {
 
 
 main {
+
   position: relative; /* Establish a positioning context for the pseudo-element */
   padding: 50px 20px;
   color: white; /* Ensure text remains readable */
@@ -114,7 +115,7 @@ main::before {
   background-size: cover; /* Ensure the image covers the entire section */
   background-position: center; /* Center the image */
   background-attachment: fixed; /* Keep the image fixed when scrolling */
-  opacity: 0.04; /* Adjust transparency */
+  opacity: 0.06; /* Adjust transparency */
   z-index: 0; /* Keep the pseudo-element behind the content */
   pointer-events: none; /* Avoid interaction issues */
 }
@@ -148,14 +149,15 @@ main > * {
   margin-bottom: 40px; /* Space below the separator */
 }
 
+
 /* Flyer Styling */
 .upcoming-events img,
 .past-events img {
   float: left; /* Aligns the flyer to the left of the container */
   margin-right: 2%; /* Adds space between the flyer and the adjacent content */
   padding: 10px;
-  width: 35%; /* Fixed width */
-  height: 35%; /* Fixed height */
+  width: 40%; /* Fixed width */
+  height: 50%; /* Fixed height */
   object-fit: cover; /* Ensures the image fits the dimensions without distortion */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow for a polished look */

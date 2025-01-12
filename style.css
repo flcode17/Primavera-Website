@@ -93,9 +93,8 @@ nav {
 }
 
 
-
-
 main {
+
   position: relative; /* Establish a positioning context for the pseudo-element */
   padding: 50px 20px;
   color: white; /* Ensure text remains readable */
@@ -148,14 +147,15 @@ main > * {
   margin-bottom: 40px; /* Space below the separator */
 }
 
+
 /* Flyer Styling */
 .upcoming-events img,
 .past-events img {
   float: left; /* Aligns the flyer to the left of the container */
   margin-right: 2%; /* Adds space between the flyer and the adjacent content */
-  padding: 10px;
   width: 40%; /* Fixed width */
   height: 50%; /* Fixed height */
+  padding: 5px;
   object-fit: cover; /* Ensures the image fits the dimensions without distortion */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow for a polished look */
@@ -163,7 +163,67 @@ main > * {
 
 
 
+
+/* Full Gallery Styling */
+.gallery-flyer {
+  width: 60%;
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center horizontally */
+  display: block; /* Ensure it's treated as a block element */
+  padding: 20px 0; /* Optional padding for spacing */
+}
+
+
+/* Events Grid Styling */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 10px;
+}
+
+.gallery-grid a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-grid a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images fill the container */
+  aspect-ratio: 1/1; /* Make all images square */
+  transition: transform 0.4s ease; /* Smooth hover effect */
+}
+
+.gallery-grid a:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.gallery-grid a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0); /* Dark overlay for images */
+  transition: background 0.4s ease;
+}
+
+.gallery-grid a:hover::after {
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
+}
+
+
+
 /* Gallery Styling */
+.gallery-text {
+  float: left;
+  margin-left: 80px;
+  color: grey;
+}
+
 .photo-grid {
   margin-top: 40px;
 }
