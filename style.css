@@ -154,8 +154,8 @@ main > * {
   float: left; /* Aligns the flyer to the left of the container */
   margin-right: 2%; /* Adds space between the flyer and the adjacent content */
   padding: 10px;
-  width: 35%; /* Fixed width */
-  height: 35%; /* Fixed height */
+  width: 40%; /* Fixed width */
+  height: 50%; /* Fixed height */
   object-fit: cover; /* Ensures the image fits the dimensions without distortion */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow for a polished look */

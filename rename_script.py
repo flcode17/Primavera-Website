@@ -3,7 +3,7 @@ import os
 def rename_photos(folder_path):
     try:
         # name of photos
-        prefix = "G"
+        prefix = "M"
         counter = 1
 
         # List and filter photo files
@@ -37,4 +37,4 @@ def rename_photos(folder_path):
         print(f"Error: {e}")
 
 # Example usage
-rename_photos(r"C:\Users\Andrew Sergeyev\PycharmProjects\Python\Primavera Website\Events\BackToNormal\Photos")
+rename_photos(r"/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events/BackToNormal/Photos")
