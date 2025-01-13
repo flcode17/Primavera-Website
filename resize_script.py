@@ -32,8 +32,8 @@ def resize_images_by_percentage(input_folder, output_folder, scale_percentage):
                 print(f"Resized {filename} to {new_width}x{new_height} and saved to {output_path}")
 
 
-input_folder = "/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events/010_Preburn/Photos"  # Replace with your input folder path
-output_folder = "/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events/010_Preburn/GalleryPhotos"  # Replace with your output folder path
+input_folder = "/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events/BackToNormal/Photos"  # Replace with your input folder path
+output_folder = "/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events/BackToNormal/GalleryPhotos"  # Replace with your output folder path
 scale_percentage = 30  #number, not percentage
 
 resize_images_by_percentage(input_folder, output_folder, scale_percentage)
