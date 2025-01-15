@@ -1,5 +1,6 @@
 /* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Merriweather:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
 
 /* General Reset */
 * {
@@ -10,14 +11,17 @@
 
 /* General Styling */
 body {
+  font-family: "Jura", sans-serif;
+  font-weight: 400; /* Default weight for paragraphs */
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
   background-color: #000000; /* Black background */
   color: white;
 }
 
 /* Header Styling */
 header {
+  font-family: "Jura", sans-serif;
+  font-weight: 400; /* Default weight for paragraphs */
   text-align: center; /* Center all elements in the header */
   background-color: #000; /* Black background for the header */
 }
@@ -129,8 +133,8 @@ main > * {
   font-size: 1.5rem;
   max-width: 800px;
   margin: 0 auto 30px;
-  font-family: 'Merriweather', serif; /* Merriweather for description text */
-  font-weight: 400;
+  font-family: "Jura", sans-serif;
+  font-weight: 400; /* Default weight for paragraphs */
 }
 
 .main-description video {
@@ -220,7 +224,7 @@ main > * {
 /* Gallery Styling */
 .gallery-text {
   float: left;
-  margin-left: 80px;
+  margin-left: 110px;
   color: grey;
 }
 
@@ -318,66 +322,89 @@ main > * {
   background: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
 }
 
-/* Wrapper for artist content and soundcloud */
-.artist-wrapper {
-  display: flex; /* Flexbox layout */
-  align-items: flex-start; /* Align items at the top */
-  justify-content: space-between; /* Space between the two sections */
-  gap: 20px; /* Add space between artist section and SoundCloud visualizer */
-  margin-bottom: 30px; /* Add space below each artist section */
-  padding: 10px;
+/* Table Structure */
+.artist-table {
+  width: 100%;
+  border-collapse: collapse; /* Remove space between table cells */
+  margin: 20px 0; /* Add space around the table */
 }
 
-/* Artist Section Styling */
-.artist-section {
-  flex: 0 0 60%; /* Take up 60% of the container width */
-  display: flex;
-  gap: 20px; /* Add space between image and details */
+/* Table Row Styling */
+.artist-table tr {
+  vertical-align: top; /* Align items to the top */
 }
 
-.artist-image {
-  width: 50%; /* Fixed width for the image */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Prevent image from exceeding its natural size */
-  display: block;
-}
-
-.artist-details {
-  flex: 1; /* Allow details to grow within the section */
+/* Artist Name and Description */
+.artist-name-description {
+  text-align: left;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif; /* Stylish font */
+  color: white;
 }
 
 .artist-name {
-  font-size: 2rem; /* Bigger font size */
+  font-size: 2rem; /* Larger font for the artist's name */
   font-weight: bold;
-  color: white; /* White text for contrast */
-  margin-bottom: 10px; /* Add spacing below the name */
+  margin-bottom: 10px;
 }
 
-.artist-details p {
-  font-size: 1.2rem; /* Text size for description */
-  color: white;
+.artist-description {
+  font-size: 1.2rem; /* Smaller font for the description */
   margin: 0;
+  line-height: 1.6; /* Improve readability */
 }
 
-/* SoundCloud Section */
+/* Artist Image Styling */
+.artist-image {
+  width: 40%; /* Restrict image column width */
+  text-align: center; /* Center-align image in the cell */
+  padding: 10px;
+}
+
+.artist-image img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+/* SoundCloud Links Styling */
 .artist-soundcloud {
-  flex: 0 0 40%; /* Take up 40% of the container width */
+  width: 60%; /* Allocate more space for SoundCloud links */
+  padding: 10px;
+  text-align: center; /* Center SoundCloud players */
+  vertical-align: middle; /* Align vertically */
 }
 
-.soundcloud-visualizer {
-  width: 100%; /* Full width of the container */
+.artist-soundcloud iframe {
+  width: 100%; /* Stretch to fit cell */
+  height: 125px;
+  margin-bottom: 10px; /* Space between players */
+  border-radius: 5px; /* Rounded edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
-.soundcloud-visualizer iframe {
-  width: 100%; /* Full width */
-  height: 150px; /* Set iframe height */
-  border: none; /* No border */
-  background: none; /* Transparent background */
-}
-
-
-/* Media Queries */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .artist-table {
+    display: block; /* Stack rows on smaller screens */
+  }
+
+  .artist-table tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .artist-image,
+  .artist-soundcloud {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .artist-name-description {
+    text-align: center; /* Center text for mobile */
+  }
+
+
   .nav-links {
     flex-direction: column;
     gap: 20px;
@@ -393,3 +420,4 @@ main > * {
   }
 
 }
+
