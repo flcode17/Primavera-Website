@@ -282,6 +282,19 @@ main > * {
 }
 
 /* Events Grid Styling */
+.events-title  {
+  font-family: "Jura", sans-serif;
+  font-weight: 400; /* Default weight for paragraphs */
+  font-size: 40px;
+}
+.events-paragraph {
+  font-family: "Jura", sans-serif;
+  font-weight: 400; /* Default weight for paragraphs */
+  font-size: 20px;
+}
+
+
+
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); /* Responsive grid */
@@ -338,13 +351,15 @@ main > * {
 .artist-name-description {
   text-align: left;
   padding: 20px;
-  font-family: 'Montserrat', sans-serif; /* Stylish font */
+  font-family: "Jura", sans-serif;
+  font-weight: 400; /* Default weight for paragraphs */
   color: white;
 }
 
 .artist-name {
   font-size: 2rem; /* Larger font for the artist's name */
-  font-weight: bold;
+  font-family: "Jura", sans-serif;
+  font-weight: 400; /* Default weight for paragraphs */
   margin-bottom: 10px;
 }
 
