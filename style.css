@@ -297,7 +297,7 @@ main > * {
 
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(17%, 1fr)); /* Responsive grid */
   gap: 10px;
 }
 
@@ -398,6 +398,63 @@ main > * {
   border-radius: 5px; /* Rounded edges */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
+
+
+/* Contact Css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background for contrast */
+    color: #fff; /* White text */
+}
+
+
+
+
+/* Table Container */
+.table-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between the two tables */
+    padding: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 45%; /* Each table takes up 45% of the container */
+    border-spacing: 10px; /* Space between table cells */
+}
+
+td {
+    vertical-align: middle;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Image Styling */
+td img {
+    width: 60px; /* Adjust size of the images */
+    height: 60px;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin-right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for a polished look */
+}
+
+/* Link Styling */
+td a {
+    text-decoration: none;
+    color: #ff69b4; /* Pink links */
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+td a:hover {
+    color: #fff; /* White on hover */
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
