@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Talent | Primavera Music</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Primavera Music</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Contact Css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background for contrast */
+            color: #fff; /* White text */
+        }
+
+
+        /* Table Container */
+        .table-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px; /* Space between the two tables */
+            padding: 20px;
+        }
+
+        /* Table Styles */
+        table {
+            width: 45%; /* Each table takes up 45% of the container */
+            border-spacing: 10px; /* Space between table cells */
+        }
+
+        td {
+            font-size: 30px;
+            vertical-align: middle;
+            text-align: left;
+            padding: 10px;
+        }
+
+        /* Image Styling */
+        td img {
+            width: 60px; /* Adjust size of the images */
+            height: 60px;
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 8px; /* Rounded corners */
+            margin-left: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for a polished look */
+        }
+
+        /* Link Styling */
+        td a {
+            margin-left: 20%;
+            text-decoration: none;
+            color: #ff69b4; /* Pink links */
+            font-size: 30px;
+            transition: color 0.3s;
+        }
+
+        td a:hover {
+            color: #fff; /* White on hover */
+        }
+
+    </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="Logo/pink_on_black2.png" alt="logo">
-  </div>
+    <div class="logo">
+        <img src="Logo/pink_on_black2.png" alt="logo">
+    </div>
   <header>
     <nav>
       <div class="nav-separator"></div> <!-- Thin white line above -->
@@ -22,62 +78,42 @@
       <div class="nav-separator"></div> <!-- Thin white line below -->
     </nav>
   </header>
-
-  <main>
-
-    <!-- Vesna Section -->
-    <section class="artist-wrapper">
-      <div class="artist-section">
-        <img src="Talent/Vesna.jpg" class="artist-image" alt="Vesna">
-        <div class="artist-details">
-          <h3 class="artist-name">.VESNA</h3>
-          <p>Vesna is a groundbreaking artist with a unique sound that captures hearts.</p>
-        </div>
-      </div>
-      <div class="artist-soundcloud">
-        <div class="soundcloud-visualizer">
-          <iframe
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1837746507"
-            width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay">
-          </iframe>
-          <iframe
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/560840706"
-            width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay">
-          </iframe>
-          <iframe
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/560836578"
-            width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Stardust Section -->
-    <section class="artist-wrapper">
-      <div class="artist-section">
-        <img src="Talent/Stardust.jpg" class="artist-image" alt="Stardust">
-          <h3 class="artist-name">.STARDUST</h3>
-          <p>Stardust creates immersive music sets.</p>
-      </div>
-      <div class="artist-soundcloud">
-        <div class="soundcloud-visualizer">
-          <iframe
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/835423723"
-            width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay">
-          </iframe>
-          <iframe
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/455507481"
-            width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay">
-          </iframe>
-          <iframe
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/455509287"
-            width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay">
-          </iframe>
-        </div>
-      </div>
-    </section>
-  </main>
+    <div class="table-container">
+        <!-- Left table -->
+        <table>
+            <tr>
+                <td><img src="Social/saturated_phone.JPG" alt="Phone"></td>
+                <td><a>+1(509)-850-0387</a></td>
+            </tr>
+            <tr>
+                <td><img src="Social/saturated_gmail.JPG" alt="Email"></td>
+                <td><a href="https://gmail.com/">music@primaveraofficial.com</a></td>
+            </tr>
+            <tr>
+                <td><img src="Social/saturated_whatsapp.jpeg" alt="Whatsapp"></td>
+                <td><a href="https://www.whatsapp.com/">+1(509)-850-0387</a></td>
+            </tr>
+            <tr>
+                <td><img src="Social/saturated_telegram.jpeg" alt="Telegram"></td>
+                <td><a href="https://telegram.org/">+1(509)-850-0387</a></td>
+            </tr>
+            <tr>
+                <td><img src="Social/saturated_instagram.JPG" alt="Primavera Instagram"></td>
+                <td><a href="https://www.instagram.com/primavera_music_sea/">Primavera Instagram</a></td>
+            </tr>
+            <tr>
+                <td><img src="Social/saturated_instagram.JPG" alt="Vesna Instagram"></td>
+                <td><a href="https://www.instagram.com/irlando_vesna/">Vesna Instagram</a></td>
+            </tr>
+            <tr>
+                <td><img src="Social/saturated_facebook.jpeg" alt="Primavera Facebook"></td>
+                <td><a href="https://www.facebook.com/primaverasea">Primavera Facebook</a></td>
+            </tr>
+            <tr>
+                <td><img src="Social/saturated_facebook.jpeg" alt="Vesna Facebook"></td>
+                <td><a href="https://www.facebook.com/irlandovesna">Vesna Facebook</a></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
