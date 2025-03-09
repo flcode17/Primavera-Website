@@ -37,4 +37,4 @@ def rename_photos(folder_path):
         print(f"Error: {e}")
 
 # Example usage
-rename_photos(r"/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events/BackToNormal/Photos")
+rename_photos(r"/Volumes/Macintosh HD/Andrew/Work/PycharmProjects/Python/Primavera Website/Events_New/005_ABetterWorld/Photos")
