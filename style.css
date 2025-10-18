@@ -389,7 +389,7 @@ main > * {
   width: 60%; /* Allocate more space for SoundCloud links */
   padding: 10px;
   text-align: center; /* Center SoundCloud players */
-  vertical-align: middle; /* Align vertically */
+  vertical-align: top; /* Align vertically */
 }
 
 .artist-soundcloud iframe {
